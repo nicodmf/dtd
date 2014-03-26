@@ -6,7 +6,7 @@
     targetNamespace="https://raw.github.com/nicodmf"
     elementFormDefault="qualified">
      
-    <xsd:element name="designer" type="container">
+    <xsd:element name="designer" type="designer">
     </xsd:element>
   
     <xsd:complexType name="designer">
