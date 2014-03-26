@@ -16,9 +16,11 @@
       ]]></xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
+		<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
             <xsd:element name="informations" type="informations"/>
             <xsd:element minOccurs="0" maxOccurs="unbounded" name="parts" type="parts" />
             <xsd:element minOccurs="0" maxOccurs="unbounded" name="groups" type="groups"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
         </xsd:sequence>
     </xsd:complexType>
   
