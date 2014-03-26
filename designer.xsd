@@ -2,7 +2,7 @@
 
 <xs:schema 
      xmlns="https://raw.github.com/nicodmf"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema"
      targetNamespace="https://raw.github.com/nicodmf"
      elementFormDefault="qualified">
      
