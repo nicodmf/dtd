@@ -16,14 +16,14 @@
       ]]></xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="informations"/>
-            <xsd:element minOccurs="0" maxOccurs="unbounded" name="parts"/>
-            <xsd:element minOccurs="0" maxOccurs="unbounded" name="groups"/>
+            <xsd:element name="informations" type="informations"/>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="parts" type="parts" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="groups" type="groups"/>
         </xsd:sequence>
     </xsd:complexType>
   
   
-    <xsd:element name="informations">
+    <xsd:element name="informations" type="informations">
         <xsd:complexType>
             <xsd:attribute name="version" use="required"/>
             <xsd:attribute name="author" use="required"/>
@@ -31,25 +31,25 @@
         </xsd:complexType>
     </xsd:element>
     
-    <xsd:element name="parts">
+    <xsd:element name="parts" type="parts">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element minOccurs="0" maxOccurs="unbounded" name="part"/>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="part" type="part"/>
             </xsd:sequence>
             <xsd:attribute name="name" use="required"/>
         </xsd:complexType>
     </xsd:element>
     
-    <xsd:element name="part">
+    <xsd:element name="part" type="part">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element minOccurs="0" maxOccurs="unbounded" name="parameter"/>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="parameter" type="parameter"/>
             </xsd:sequence>
             <xsd:attribute name="name" use="required"/>
         </xsd:complexType>
     </xsd:element>
   
-    <xsd:element name="parameter">
+    <xsd:element name="parameter" type="parameter">
         <xsd:complexType mixed="true">
             <xsd:attribute name="name" use="required"/>
             <xsd:attribute name="type" use="required">
@@ -75,18 +75,18 @@
         </xsd:complexType>
     </xsd:element>
     
-    <xsd:element name="groups">
+    <xsd:element name="groups" type="groups">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element minOccurs="0" maxOccurs="unbounded" name="group"/>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="group" type="group"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
     
-    <xsd:element name="group">
+    <xsd:element name="group" type="group">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element minOccurs="0" maxOccurs="unbounded" name="parameter"/>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="parameter" type="parameter"/>
             </xsd:sequence>
             <xsd:attribute name="name" use="required"/>
         </xsd:complexType>
